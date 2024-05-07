@@ -1,0 +1,766 @@
+@import url("https://fonts.googleapis.com/css2?family=Coiny&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@font-face {
+  font-family: "Sukar";
+  src: url("/assets/SukarRegular.ttf");
+}
+
+@font-face {
+  font-family: "Sukar-Bold";
+  src: url("/assets/SukarBlack.otf");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+
+  font-family: "Coiny", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+html {
+  max-width: 100vw;
+}
+
+body {
+  background-color: white;
+  background-image: url("assets/pattern-yellow.svg");
+  background-size: 500px;
+  background-repeat: repeat;
+}
+
+.p-bg {
+  background-color: #ffeac8;
+  background-image: url("assets/pattern.png");
+  background-size: 700px;
+  background-repeat: repeat;
+}
+
+.outline {
+  text-shadow: -2px -2px 0 white, 2px -2px 0 white, -2px 2px 0 white,
+    2px 2px 0 white;
+}
+
+nav {
+  background-color: #3ac0c2;
+  padding: 1rem 2rem;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  -webkit-box-shadow: 0px 20px 60px -25px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 20px 60px -25px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 20px 60px -25px rgba(0, 0, 0, 0.5);
+}
+
+nav img {
+  height: 50px;
+  transform: translate(0, 6px);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 1.5rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+nav ul li a.call-to-action {
+  background-color: #eeae55;
+  padding: 0.5rem 2rem;
+
+  border-radius: 1000px;
+}
+
+#home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#home img.wave, #home img.wave-tall {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 0;
+}
+
+#home img.clouds {
+  position: absolute;
+  top: calc(50px + 2rem);
+  right: 0;
+  width: 80%;
+}
+
+#home .container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+
+  padding: 10rem 2rem 0 2rem;
+
+  box-sizing: border-box;
+  width: 100%;
+}
+
+#home .container div {
+  flex: 1;
+  display: grid;
+  place-items: center;
+}
+
+#home .container .logo img {
+  width: 65%;
+  z-index: 1;
+}
+
+#home .container .hero img {
+  width: 75%;
+  z-index: 1;
+}
+
+#home h1.slogin {
+  color: #001f89;
+  font-size: 2rem;
+  text-align: center;
+
+  z-index: 1;
+}
+
+#home h1.slogin img {
+  width: 80px;
+  transform: translate(0, 22px);
+}
+
+#home p {
+  color: white;
+  background-color: #f3b610;
+
+  padding: 0.75rem;
+
+  border-radius: 1.5rem;
+  outline: 5px solid white;
+
+  text-align: center;
+
+  width: fit-content;
+}
+
+#home .socials {
+  display: flex;
+  gap: 1rem;
+
+  margin-top: 1rem;
+}
+
+#home .socials a {
+  color: white;
+  background-color: #001f89;
+  text-decoration: none;
+
+  width: 30px;
+  height: 30px;
+
+  border-radius: 1000px;
+
+  display: grid;
+  place-items: center;
+
+  transition: 0.2s ease-in-out;
+}
+
+#home .socials a:hover {
+  background-color: white;
+  color: #001f89;
+}
+
+#home .socials a i {
+  font-size: 1rem;
+}
+
+#about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem 0 8rem 0;
+}
+
+#about h1 {
+  font-size: 2rem;
+  color: #001f89;
+}
+
+#about .specialties {
+  display: flex;
+  justify-content: space-evenly;
+
+  width: 100%;
+
+  margin-top: 2rem;
+}
+
+#about .specialties .specialty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  width: 300px;
+}
+
+#about .specialties .specialty h3 {
+  color: white;
+  background-color: #f3b610;
+  outline: 3px solid white;
+
+  text-align: center;
+
+  border-radius: 1.5rem;
+
+  padding: 0.25rem 1.5rem;
+
+  width: fit-content;
+
+  -webkit-box-shadow: 0px 30px 0px -20px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 30px 0px -20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 30px 0px -20px rgba(0, 0, 0, 0.1);
+}
+
+#about .specialties .specialty p {
+  text-align: center;
+}
+
+.separator-1 {
+  position: absolute;
+  
+  width: 100%;
+
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  z-index: 2;
+
+  padding: 0 5rem;
+
+  box-sizing: border-box;
+}
+
+.separator-1 img {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.separator-1 .container {
+  position: relative;
+  max-width: 300px;
+  width: 300px
+}
+
+.separator-1 .container img {
+  position: absolute;
+  width: 100%;
+  z-index: 0;
+
+  transform: translate(0, -50%);
+}
+
+#products {
+  background-color: #d4edec;
+  background-image: url("assets/pattern.png");
+  background-size: 700px;
+  background-repeat: repeat;
+
+  /* padding: 5rem 5rem 15rem 5rem; */
+  padding: calc(100vw / 11.62790698 / 2 + 5rem) 5rem calc(100vw / 2.84981476 / 2 + 5rem) 5rem;
+
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#products h1 {
+  color: #001f89;
+  font-size: 2rem;
+}
+
+#products .products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+#products .products .product {
+  h3 {
+    text-align: center;
+  }
+}
+
+#products .products .product .img-container {
+  padding: 2rem;
+
+  border-radius: 1000px;
+  outline: 3px solid white;
+  background-color: #f3b610;
+}
+
+.separator-2 {
+  width: 100%;
+  position: absolute;
+}
+
+.separator-2 .container {
+  position: absolute;
+  inset: 0;
+  /* background-color: red; */
+  transform: translate(0, -58%);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.separator-2 .container h1 {
+  font-size: 2rem;
+  color: white;
+}
+
+.separator-2 .container p {
+  color: #fcecd3;
+  text-align: center;
+}
+
+#contact {
+  background-color: white;
+  background-image: url("assets/pattern2.svg");
+  background-size: 500px;
+  background-repeat: repeat;
+
+  padding: calc(100vw / 2.84981476 / 2 + 5rem) 5rem calc(100vw / 11.62790698 / 2 + 5rem) 5rem;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 5rem;
+}
+
+#contact .hero {
+  flex: 1;
+  
+  text-align: center;
+
+  max-width: 500px;
+}
+
+#contact .hero img {
+  width: 100%;
+}
+
+.contact-info-container {
+  flex: 1;
+
+  max-width: 300px;
+
+  position: relative;
+
+  outline: 5px solid #fcb34c;
+  border-radius: 1.5rem;
+  background-color: white;
+  padding: 2rem;
+
+  h2 {
+    color: #000000;
+    font-family: "Kanit";
+  }
+
+  h1 {
+    color: black;
+    font-family: "Kanit";
+    font-size: 2rem;
+  }
+
+  p {
+    color: #949598;
+    font-family: "Kanit";
+  }
+}
+
+.contact-info-container img {
+  position: absolute;
+  top: -25px;
+  right: -25px;
+  width: 140px;
+}
+
+.contact-info-container .socials {
+  display: flex;
+  gap: 0.5rem;
+  a {
+    background-color: #eeae55;
+    border-radius: 1000px;
+    color: white;
+    text-decoration: none;
+    width: 2rem;
+    height: 2rem;
+    display: grid;
+    place-items: center;
+    transition: 0.2s ease-in-out;
+  }
+  a:hover {
+    transform: scale(1.15);
+  }
+}
+
+#kid-id {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  z-index: 1;
+
+  position: relative;
+
+  padding: calc(100vw / 11.62790698 / 2 + 5rem) 5rem 5rem 5rem;
+}
+
+#kid-id .hero {
+  max-width: 500px;
+
+  flex: 1;
+
+  text-align: center;
+}
+
+#kid-id .hero img {
+  width: 100%;
+}
+
+form {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.7rem;
+  flex: 1;
+
+  max-width: 400px;
+
+
+  font-family: "Sukar" !important;
+
+  background-color: white;
+
+  outline: 5px solid #f2b707;
+
+  padding: 2rem;
+
+  width: 25%;
+
+  border-radius: 1.5rem;
+
+  button {
+    width: 9rem;
+    height: 2rem;
+
+    background-color: #f3b706;
+    color: white;
+
+    border-radius: 0.9rem;
+    border: none;
+
+    margin-top: 0.5rem;
+
+    transition: 0.2s ease-in-out;
+  }
+  button:hover {
+    transform: scale(1.15);
+    cursor: pointer;
+  }
+  p {
+    width: 100%;
+    text-align: left;
+  }
+  h1 {
+    width: 100%;
+  }
+}
+
+
+form img {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  z-index: -1;
+  left: 10rem;
+}
+
+.field {
+  position: relative;
+  width: 100%;
+}
+
+form h1 {
+  font-family: "Sukar-Bold";
+}
+
+.field label {
+  font-family: "Sukar";
+}
+
+.field input {
+  font-family: "Sukar";
+  padding-left: 2rem;
+  box-sizing: border-box;
+  width: 98%;
+  height: 2rem;
+  border-radius: 0.5rem;
+  outline: 2px solid #f2b707;
+  border: none;
+}
+
+.field i {
+  position: absolute;
+  left: 10px;
+  color: #eeae55;
+  transform: translate(0, 200%);
+}
+
+.orange-circle-1 {
+  width: 400px;
+  height: 400px;
+  left: -280px;
+  bottom: 100px;
+  position: absolute;
+  opacity: 0.4;
+
+  z-index: -1;
+}
+
+.orange-circle-2 {
+  position: absolute;
+  width: 80px;
+  left: 40px;
+  bottom: 170px;
+
+  z-index: -1;
+}
+
+footer {
+  width: 100%;
+}
+
+/* footer .image {
+  width: 100%;
+  background-color: red;
+} */
+
+footer img {
+  width: 100%;
+}
+
+footer .container {
+  position: relative;
+
+  width: 100%;
+  /* height: calc(100vw / 2.81); */
+  aspect-ratio: 2.81/1;
+
+  /* background-color: red; */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  color: white;
+
+  /* padding-top: 14rem; */
+  box-sizing: border-box;
+
+  font-family: "Kanit";
+
+  h1, p, ul {
+    margin: 0;
+  }
+}
+
+footer .container .content {
+  position: absolute;
+  inset: 0;
+  top: 14rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "Kanit";
+
+  color: white;
+
+  h1, p, ul {
+    margin: 0;
+  }
+}
+
+footer .container img {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+footer .container ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+
+  a {
+    color: white;
+    font-family: "Kanit";
+  }
+}
+
+footer .container ul:last-child {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 0.25rem;
+  
+  p, a {
+    font-family: "Kanit" !important;
+    color: white;
+  }
+  
+  a {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+footer .container .socials {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+
+  a {
+    width: 25px;
+    height: 25px;
+
+    background-color: white;
+    color: #3ac0c2;
+
+    border-radius: 1000px;
+
+    display: grid;
+    place-items: center;
+
+    text-decoration: none;
+  }
+}
+
+
+@media only screen and (max-width: 450px) {
+  #home h1.slogin {
+      font-size: 1.5rem;
+  }
+
+  #home h1.slogin img {
+      width: 55px;
+      transform: translate(0, 15px);
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  body {
+      background-size: 400px;
+  }
+
+  #home .container {
+      flex-direction: column-reverse;
+  }
+
+  #home img.wave-tall {
+      display: block;
+  }
+
+  #home img.clouds {
+      top: calc(50px + 5rem);
+  }
+
+  #about .specialties {
+      flex-direction: column;
+      justify-content: start;
+      align-items: center;
+      gap: 2rem;
+  }
+
+  .separator-2 .container h1 {
+    font-size: 1.5rem;
+  }
+
+
+  .separator-2 .container p {
+    display: none;
+  }
+
+  #contact {
+    flex-direction: column;
+  }
+
+  #kid-id {
+    flex-direction: column-reverse;
+  }
+
+  .contact-info-container {
+    width: 100%;
+    max-width: none;
+  }
+
+  #kid-id form {
+    width: 100%;
+  }
+
+  footer .container .content {
+    display: none; 
+  }
+  
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  #home img.wave-tall {
+      display: none;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}
