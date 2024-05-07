@@ -436,6 +436,7 @@ nav ul li a.call-to-action {
   z-index: 1;
 
   position: relative;
+  overflow-x: hidden;
 
   padding: calc(100vw / 11.62790698 / 2 + 5rem) 5rem 5rem 5rem;
 }
@@ -502,7 +503,6 @@ form {
     width: 100%;
   }
 }
-
 
 form img {
   position: absolute;
